@@ -1,0 +1,402 @@
+@keyframes rotation
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+#CVloaderBG
+    top: 0
+    width: 100vw
+    height: 100vh
+    position: absolute
+    background-color: #DDD
+    z-index: 11
+    justify-content: center
+    text-align: center
+
+.loader
+    width: 72px
+    height: 72px
+    border: 5px solid #000
+    border-bottom-color: transparent
+    border-radius: 50%
+    display: inline-block
+    box-sizing: border-box
+    animation: rotation 1s linear infinite
+    margin-top: 50vh
+
+.hidden
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0s 2s, opacity 2s linear
+
+#webgl
+    position: fixed
+    top: 0
+    left: 0
+    outline: none
+    z-index: 10
+
+.section
+    font-family: 'Coves', sans-serif
+    align-items: center
+    text-align: center
+    height: 100vh
+    position: relative
+    text-transform: uppercase
+    -webkit-text-stroke: 0.5px gray
+
+.section:nth-child(odd)
+    -webkit-text-stroke: 0.5px black
+    color: white
+    box-shadow: none
+
+h1
+    font-family: 'Coves', sans-serif
+    font-weight: bold
+    font-size: 5em
+    padding-top: 2%
+
+h2
+    font-family: 'Coves', sans-serif
+    font-weight: 500
+    font-size: 4em
+    padding-top: 1%
+
+h3
+    font-family: 'Coves', sans-serif
+    font-size: 2em
+    padding-top: 0.5%
+
+h4
+    font-family: 'Coves', sans-serif
+    font-size: 1.5em
+    padding-top: 0.1%
+    font-style: italic
+
+a
+    position: relative
+    z-index: 10
+
+.blackBG
+    content: " "
+    position: absolute
+    background-color: rgba(10,10,10, 0.3)
+    z-index: auto
+    top: 5vh
+    left: 32.5vw
+    width: 35%
+    height: 90%
+
+.whiteBG
+    content: " "
+    position: absolute
+    background-color: rgba(150, 150, 150, 0.3)
+    z-index: auto
+    top: 5vh
+    left: 32.5vw
+    width: 35%
+    height: 90%
+
+#header
+    img
+        width: 40vh
+        padding-top: 4%
+    section
+        position: relative
+        justify-content: center
+    .whiteBG
+        content: " "
+        position: absolute
+        z-index: auto
+        top: 49vh
+        left: 31.5vw
+        width: 35%
+        height: 35%
+
+#prog
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    table
+        position: absolute
+        z-index: 9
+        width: 75%
+        height: 70%
+        top: 20vh
+        left: 10vw
+        font-size: 1.7em
+    .blackBG
+        content: " "
+        position: absolute
+        background-color: rgba(0.1,0.1,0.1, 0.3)
+        z-index: auto
+        top: 5vh
+        left: 10vw
+        width: 80%
+        height: 90%
+
+#diplome
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    section
+        position: relative
+        right: 17.5%
+        margin-top: 5%
+        justify-content: center
+        h3
+            font-size: 3em
+        h4
+            font-size: 1.5em
+    section:nth-child(odd)
+        left: 17.5%
+
+#projet
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    section
+        position: relative
+        right: 17.5%
+        margin-top: 2%
+        justify-content: center
+        h3
+            font-size: 3em
+        h4
+            font-size: 1.5em
+            a
+                img
+                    width: 2%
+                    filter: brightness(0.8)
+                img:hover
+                    filter: brightness(1)
+    section:nth-child(odd)
+        left: 17.5%
+
+#pro
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    section
+        position: relative
+        right: 17.5%
+        margin-top: 5%
+        justify-content: center
+        h3
+            font-size: 3em
+        h4
+            font-size: 1.5em
+            a
+                text-decoration: none
+                color: gray
+            a:hover
+                color: black
+    section:nth-child(odd)
+        left: 17.5%
+
+#hobbies
+    justify-content: space-around
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    section
+        position: relative
+        right: 17.5%
+        margin-top: 3%
+        justify-content: center
+    section:nth-child(odd)
+        left: 17.5%
+
+#footer
+    h2
+        padding-top: 5%
+        position: inherit
+        z-index: 10
+    #logo
+        display: flex
+        justify-content: space-around
+        margin-top: 10%
+        img
+            width: 30vh
+            filter: brightness(0.9)
+        img:hover
+            filter: brightness(1)
+    a
+        text-decoration: none
+        color: black
+    a:hover
+        color: gray
+    #return
+        position: relative
+        top: 100px
+
+@media screen and (max-width: 900px) and (min-width: 600px)
+
+    canvas
+        display: none
+
+    h1
+        font-size: 4em
+        padding-top: 15%
+
+    h2
+        font-size: 3em
+        padding-top: 5%
+
+    h3
+        font-size: 1.5em
+        padding-top: 2%
+
+    h4
+        font-size: 1em
+        padding-top: 1%
+
+    #prog
+        h2
+            padding-top: 10%
+
+    #diplome
+        h2
+            padding-top: 10%
+        section
+            margin-top: 10%
+            right: 0%
+            h3
+                font-size: 2em
+            h4
+                font-size: 1.5em
+        section:nth-child(odd)
+            left: 0%
+
+    #projet
+        h2
+            padding-top: 10%
+        section
+            margin-top: 4%
+            right: 0%
+            h3
+                font-size: 2em
+            h4
+                font-size: 1.5em
+                a
+                    img
+                        width: 5%
+        section:nth-child(odd)
+            left: 0%
+
+    #pro
+        h2
+            padding-top: 10%
+        section
+            margin-top: 10%
+            right: 0%
+            h3
+                font-size: 2em
+            h4
+                font-size: 1.5em
+        section:nth-child(odd)
+            left: 0%
+
+    #hobbies
+        h2
+            padding-top: 10%
+        section
+            margin-top: 7%
+        section:nth-child(odd)
+            left: 17.5%
+
+    #footer
+        h2
+            padding-top: 10%
+        #logo
+            margin-top: 20%
+            img
+                width: 25vh
+
+@media screen and (max-width: 600px)
+    canvas
+        display: none
+
+    h1
+        font-size: 4em
+        padding-top: 10%
+
+    h2
+        font-size: 3em
+        padding-top: 7%
+
+    h3
+        font-size: 1.5em
+        padding-top: 5%
+
+    h4
+        font-size: 1em
+        padding-top: 1%
+
+    #prog
+        h2
+            padding-top: 15%
+
+    #diplome
+        h2
+            padding-top: 10%
+        section
+            margin-top: 10%
+            right: 0%
+            h3
+                font-size: 1.7em
+            h4
+                font-size: 1.3em
+        section:nth-child(odd)
+            left: 0%
+
+    #projet
+        h2
+            padding-top: 15%
+        section
+            margin-top: 3%
+            right: 0%
+            h3
+                font-size: 1.7em
+            h4
+                font-size: 1.3em
+                a
+                    img
+                        width: 7%
+        section:nth-child(odd)
+            left: 0%
+
+    #pro
+        h2
+            padding-top: 15%
+        section
+            margin-top: 10%
+            right: 0%
+            h3
+                font-size: 1.7em
+            h4
+                font-size: 1.3em
+        section:nth-child(odd)
+            left: 0%
+
+    #hobbies
+        h2
+            padding-top: 15%
+        section
+            margin-top: 7%
+        section:nth-child(odd)
+            left: 17.5%
+
+    #footer
+        h2
+            padding-top: 15%
+        #logo
+            margin-top: 25%
+            img
+                width: 25vh

@@ -12,7 +12,9 @@
       </section>
     </section>
 
-    <section id="prog" class="section">
+    <hr>
+
+    <section id="prog" class="section whiteBG">
       <h2>De nombreuses technologies</h2>
       <table>
         <tr v-for="progline in prog">
@@ -21,7 +23,9 @@
       </table>
     </section>
 
-    <section id="diplome" class="section">
+    <hr>
+
+    <section id="diplome" class="section whiteBG">
       <h2>Mes diplômes</h2>
       <section v-for="dipline in diplomes">
         <h3>{{ dipline.name }}</h3>
@@ -30,18 +34,9 @@
       </section>
     </section>
 
-    <section id="projet" class="section">
-      <h2>Mes projets</h2>
-      <section v-for="projline in projets">
-        <h3>{{ projline.name }}</h3>
-        <h4>{{ projline.info }}</h4>
-        <h4>{{ projline.job }}</h4>
-        <h4>{{ projline.desc }}</h4>
-        <h4><a :href=projline.link>Plus d'informations...</a></h4>
-      </section>
-    </section>
+    <hr>
 
-    <section id="pro" class="section">
+    <section id="pro" class="section whiteBG">
       <h2>Mes expériences</h2>
       <section v-for="expline in experiences">
         <h3>{{ expline.name }}</h3>
@@ -53,13 +48,20 @@
       </section>
     </section>
 
-    <section id="hobbies" class="section">
-      <h2>Je fais également...</h2>
+    <hr>
 
-      <section v-for="(name) in hobbies">
-        <h3>{{ name }}</h3>
+    <section id="projet" class="section whiteBG">
+      <h2>Mes projets</h2>
+      <section v-for="projline in projets">
+        <h3>{{ projline.name }}</h3>
+        <h4>{{ projline.info }}</h4>
+        <h4>{{ projline.job }}</h4>
+        <h4>{{ projline.desc }}</h4>
+        <h4><a :href=projline.link>Plus d'informations...</a></h4>
       </section>
     </section>
+
+    <hr>
 
     <section id="footer" class="section">
 
@@ -79,9 +81,11 @@ import onInitCVTHREE from "@/js/CVThreejs.js";
 export default {
   mounted: function () {
     onInitCVTHREE()
+    this.getAge()
   },
   data: () => {
     return {
+      age: 0,
       prog: {
         l1: ["HTML / CSS / SASS", "JS / TS", "Three.js"],
         l2: ["Angular / Vue.js", "SQL / PLPGSQL", "PHP / Symfony"],
@@ -160,13 +164,24 @@ export default {
           date: "Mai 2021 à Juillet 2021 - Pepinoix - Poliénas",
           link: "http://www.pepinoix.com/fr/"
         }
-      },
-      hobbies: ["Du Pixel-Art", "De la Photographie", "De la Modélisation 3D", "De l'Escalade", "De la Randonnée"]
+      }
+    }
+  },
+  methods: {
+    getAge() {
+      var today = new Date();
+      var birthDate = new Date('08/11/2001');
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      this.age = age
     }
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/sass/cv.sass";
 </style>

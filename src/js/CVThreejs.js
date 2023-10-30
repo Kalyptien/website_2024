@@ -8,6 +8,8 @@ window.addEventListener('scroll', () => {
 
 const initCVThreeJS = () => {
 
+    const backgroundIMG = require("@/assets/background.jpg")
+
     const sizes = {
         width: window.innerWidth,
         height: window.innerHeight
@@ -21,21 +23,27 @@ const initCVThreeJS = () => {
     })
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.setClearAlpha(0)
+    renderer.toneMapping = THREE.ACESFilmicToneMapping
 
     // Scene
     let scene = new THREE.Scene()
+
+    scene.background = new THREE.Color(0x000000);
 
     // Base camera
     let camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
     camera.position.z = 6
     scene.add(camera)
 
-    //Load background texture
-    const loader = new THREE.TextureLoader();
-
     const objLoader = new OBJLoader()
     let sectionMeshes = []
+
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    cube.position.y = 1
+    scene.add(cube);
+
 
     window.addEventListener('resize', onWindowResize, false)
     function onWindowResize() {

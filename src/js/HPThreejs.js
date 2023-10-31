@@ -6,9 +6,7 @@ window.addEventListener('scroll', () => {
     scrollY = window.scrollY
 })
 
-const initCVThreeJS = () => {
-
-    const backgroundIMG = require("@/assets/backgroundCV.jpg")
+const initHPThreeJS = () => {
 
     const sizes = {
         width: window.innerWidth,
@@ -17,19 +15,18 @@ const initCVThreeJS = () => {
 
     //Renderer
     let renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById('webglCV'),
+        canvas: document.getElementById('webglHP'),
         antialias: true,
         alpha: true
     })
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.toneMapping = THREE.ACESFilmicToneMapping
+
     // Scene
     let scene = new THREE.Scene()
 
-    const loader = new THREE.TextureLoader();
-    scene.background = loader.load(backgroundIMG);
-    scene.background.encoding = THREE.sRGBEncoding;
+    scene.background = new THREE.Color(0x111111);
 
     // Base camera
     let camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
@@ -43,6 +40,7 @@ const initCVThreeJS = () => {
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
     cube.position.y = 1
+    cube.position.x = 1.5
     scene.add(cube);
 
 
@@ -84,7 +82,7 @@ const initCVThreeJS = () => {
 
         // Call tick again on the next frame
 
-        if (window.location.href.includes("curriculum")) {
+        if (window.location.href.includes("")) {
             window.requestAnimationFrame(tick)
         }
         else {
@@ -98,4 +96,4 @@ const initCVThreeJS = () => {
 
 }
 
-export default initCVThreeJS;
+export default initHPThreeJS;

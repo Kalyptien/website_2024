@@ -11,6 +11,11 @@
 </template>
 
 <style>
+body {
+  margin: 0;
+  background-color: #111
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +25,7 @@
 nav {
   color: #EEE;
   padding: 20px;
-  margin: 0px 35%;
+  margin: 15px 35%;
   background-color: #222;
   text-align: center;
   border-radius: 50px;

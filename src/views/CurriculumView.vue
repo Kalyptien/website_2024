@@ -69,6 +69,8 @@
       <div class="whitekBG"></div>
 
       <div id="logo">
+        <img alt="Vue logo" src="../assets/logo.png" />
+        <img alt="Vue logo" src="../assets/logo.png" />
       </div>
     </section>
 
@@ -76,63 +78,63 @@
 </template>
 
 <script>
-import onInitCVTHREE from "@/js/CVThreejs.js";
+import initCVThreeJS from "@/js/CVThreejs.js";
 
 export default {
   mounted: function () {
-    onInitCVTHREE()
+    initCVThreeJS()
     this.getAge()
   },
   data: () => {
     return {
       age: 0,
-      prog: {
-        l1: ["HTML / CSS / SASS", "JS / TS", "Three.js"],
-        l2: ["Angular / Vue.js", "SQL / PLPGSQL", "PHP / Symfony"],
-        l3: ["Java / JEE", "Android (Java-XML)", "ADA"]
-      },
-      diplomes: {
-        l1: {
+      prog: [
+        ["HTML / CSS / SASS", "JS / TS", "Three.js"],
+        ["Angular / Vue.js", "SQL / PLPGSQL", "PHP / Symfony"],
+        ["Java / JEE", "Android (Java-XML)", "ADA"]
+      ],
+      diplomes: [
+        {
           name: "Licence professionnelle",
           spe: "Spécialité Application Web",
           date: "2021-22 : IUT 2 - Grenoble"
         },
-        l2: {
+        {
           name: "DUT",
           spe: "Spécialité Informatique",
           date: "2019-21 : IUT 2 - Grenoble"
         },
-        l3: {
+        {
           name: "Baccalauréat général",
           spe: "Spécialité Science de l`Ingénieur",
           date: "2017-19 : Lycée Paul Héroult - Saint Jean de Maurienne"
         }
-      },
-      projets: {
-        l1: {
+      ],
+      projets: [
+        {
           name: "Ani'Game",
           info: "2 personnes",
           job: "Graphiste & Développeur",
           desc: "Logiciel associatif de blind-test",
           link: "https://github.com/GaelGC/ani-grenoble-games-client",
         },
-        l2: {
+        {
           name: "Rutabagarre",
           info: "4 personnes / 5 jours",
           job: "Graphiste & Intégrateur",
           desc: "GameJam - Arrivé en 1ere place",
           link: "https://github.com/mindstorm38/rutabagarre",
         },
-        l3: {
+        {
           name: "Red Team",
           info: "3 personnes",
           job: "Spécialisé Forensic",
           desc: "Concours de Cyber-Sécurité - Arrivé en 3eme place",
           link: "https://esisar.grenoble-inp.fr/fr/l-ecole/csaw-2018-les-resultats",
         }
-      },
-      experiences: {
-        l1: {
+      ],
+      experiences: [
+        {
           name: "Alteca",
           techno: "Vue.js",
           desc: "Développement de projets clients",
@@ -140,7 +142,7 @@ export default {
           date: "Octobre 2023 - Alteca - Grenoble",
           link: "https://www.alteca.fr"
         },
-        l2: {
+        {
           name: "PRO.TO.T.Y.PE.",
           techno: "Symfony & Marzipano",
           desc: "Développement d'un Serious-Game Européen",
@@ -148,7 +150,7 @@ export default {
           date: "Décembre 2022 à Mai 2023 - Grenoble INP - Grenoble",
           link: "http://prototype-project.eu"
         },
-        l3: {
+        {
           name: "Lojii",
           techno: "PL/pgSQL",
           desc: "Développement d'un ERP de gestion immobiliaire",
@@ -156,7 +158,7 @@ export default {
           date: "Septembre 2021 à Octobre 2022 - Neoteem - Meylan",
           link: "https://neoteem.fr"
         },
-        l4: {
+        {
           name: "PepinoixApp",
           techno: "Android (Java/XML)",
           desc: "Développement d'une logiciel de contrôle qualité",
@@ -164,7 +166,7 @@ export default {
           date: "Mai 2021 à Juillet 2021 - Pepinoix - Poliénas",
           link: "http://www.pepinoix.com/fr/"
         }
-      }
+      ]
     }
   },
   methods: {

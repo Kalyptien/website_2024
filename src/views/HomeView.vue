@@ -1,18 +1,40 @@
 <template>
-  <div class="home">
+  <canvas id="webglHP"></canvas>
+
+  <div id="void">
+
+  </div>
+
+  <hr>
+  <section>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente rerum voluptatem ipsam, quidem vero tenetur cum
+      assumenda sit reprehenderit illo quasi praesentium nihil recusandae eos sequi voluptatum officia, neque sunt.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odio beatae aliquam dolor culpa ducimus doloribus harum.
+      Incidunt aperiam, reprehenderit officia quibusdam ipsa, inventore, quam recusandae nesciunt eveniet veniam quo!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam ad quod eum, sequi laboriosam aliquam
+      qui quisquam necessitatibus cumque, illo deserunt dolorem? Sit ducimus nostrum sed nulla vero debitis
+    </p>
+  </section>
+  <hr>
+
+  <div id="contact">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" src="../assets/logo.png" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import initHPThreeJS from "@/js/HPThreejs.js";
 
 export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
+  mounted: function () {
+    initHPThreeJS()
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/sass/homepage.sass";
+</style>

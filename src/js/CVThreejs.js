@@ -6,9 +6,10 @@ window.addEventListener('scroll', () => {
     scrollY = window.scrollY
 })
 
-const initCVThreeJS = () => {
+const initCVThreeJS = (obj) => {
 
     const backgroundIMG = require("@/assets/backgroundCV.jpg")
+    const pillarIMG = require("@/assets/marbelTexture.jpg")
 
     const sizes = {
         width: window.innerWidth,
@@ -31,6 +32,11 @@ const initCVThreeJS = () => {
     scene.background = loader.load(backgroundIMG);
     scene.background.encoding = THREE.sRGBEncoding;
 
+    const MarbelTexture = loader.load(pillarIMG)
+    MarbelTexture.encoding = THREE.sRGBEncoding
+
+    const marbel = new THREE.MeshBasicMaterial({ map: MarbelTexture })
+
     // Base camera
     let camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
     camera.position.z = 6
@@ -39,12 +45,28 @@ const initCVThreeJS = () => {
     const objLoader = new OBJLoader()
     let sectionMeshes = []
 
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    cube.position.y = 1
-    scene.add(cube);
-
+    /*objLoader.load(
+        '${this.publicPath}/assets/3d/pillar.obj',
+        (object) => {
+            object.traverse(function (child) {
+                if (child instanceof THREE.Mesh) {
+                    sectionMeshes.push(child)
+                    child.material = marbel;
+                }
+            });
+            object.position.y = 0
+            object.position.x = 0
+            object.position.z = 0
+            object.rotation.y = 0
+            scene.add(object)
+        },
+        (xhr) => {
+            console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+        },
+        (error) => {
+            console.log(error)
+        }
+    )*/
 
     window.addEventListener('resize', onWindowResize, false)
     function onWindowResize() {

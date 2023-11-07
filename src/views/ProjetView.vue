@@ -35,7 +35,7 @@
         </section>
 
         <section id="contact">
-            <h2> Plus de projet sûr</h2>
+            <h2> Plus de projets sûr</h2>
 
             <img src="../assets/logo.png">
         </section>

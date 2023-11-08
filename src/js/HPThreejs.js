@@ -213,6 +213,7 @@ const initHPThreeJS = () => {
             window.requestAnimationFrame(tick)
           }
           else{
+            console.log("HP : Scene destroy")
             scene = null
             renderer = null
             camera = null

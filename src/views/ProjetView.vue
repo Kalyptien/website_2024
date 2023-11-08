@@ -12,7 +12,10 @@
                         <h3 v-if="projline.etat == 'F'" class="final">Finalisé</h3>
                         <h3 v-else-if="projline.etat == 'E'" class="running">En cours...</h3>
                         <h3 v-else-if="projline.etat == 'V'" class="comming">A venir</h3>
+                        <h4>{{ projline.header }} </h4>
                         <section>{{ projline.desc }}</section>
+                        <a v-if="projline.link != ''" :href="projline.link" target="_blank">Plus d'informations...</a>
+                        <a v-else></a>
                     </div>
                 </div>
                 <hr>
@@ -25,7 +28,10 @@
                         <h3 v-if="projline.etat == 'F'" class="final">Finalisé</h3>
                         <h3 v-else-if="projline.etat == 'E'" class="running">En cours...</h3>
                         <h3 v-else-if="projline.etat == 'V'" class="comming">A venir</h3>
+                        <h4>{{ projline.header }} </h4>
                         <section>{{ projline.desc }}</section>
+                        <a v-if="projline.link != ''" :href="projline.link" target="_blank">Plus d'informations...</a>
+                        <a v-else></a>
                     </div>
                     <img :src="getImgUrl(projline.img)">
                 </div>
@@ -49,33 +55,43 @@ export default {
             projets: [
                 {
                     img: "logo",
-                    name: "AAAAAAAAAAAAAAAAAA",
-                    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, in voluptates. Omnis natus blanditiis eligendi illo incidunt libero corrupti suscipit, dolorem atque expedita temporibus fuga voluptatum obcaecati alias! Veniam, recusandae!",
-                    etat: "F"
+                    name: "Rutabgarre",
+                    header: "Gamejam - 👨‍👩‍👧‍👦 4 Personnes - ⏰ 5 jours - 💻 Phyton - 👨‍💻 Intrégrateur Front-End & Graphiste",
+                    desc: "Gamejam réalisé au court de mes études en DUT Informatique, nous avons eu une petite semaine pour réaliser un jeux en Python. Deux thèmes étaient également imposé : 'Fruits & Légumes' et 'S'endormir et se réveiller'. C'est après une semaine de dur labeur que nous avons pu décrocher la 1ere place, avec les honneurs !",
+                    etat: "F",
+                    link: "https://github.com/mindstorm38/rutabagarre"
                 },
                 {
                     img: "logo",
-                    name: "BBBBBBBBBBBBBBBBBB",
-                    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, in voluptates. Omnis natus blanditiis eligendi illo incidunt libero corrupti suscipit, dolorem atque expedita temporibus fuga voluptatum obcaecati alias! Veniam, recusandae!",
-                    etat: "E"
+                    name: "Ani'Game",
+                    header: "Blindtest - 👨‍👩‍👧‍👦 2 Personnes - ⏰ 1 an - 💻 Electron / TS - 👨‍💻 Intrégrateur Front-End & Graphiste",
+                    desc: "Je fais partie depuis quelques années d'une association étudiante : Ani'Grenoble. Elle tourne autour de la culture japonaise, de l'animation, ... Après des années de loyaux services, leurs logiciles de Blindtest commencait à devenir un peu ancienne. J'ai alors eu l'occasion de rejoindre un autre membre de l'association pour créer un nouveau logiciel, plus perfomant. Ce logicile est utilisé par l'association lors de festivales.",
+                    etat: "F",
+                    link: "https://github.com/GaelGC/ani-grenoble-games-client"
                 },
                 {
                     img: "logo",
-                    name: "CCCCCCCCCCCCCCCCCC",
-                    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, in voluptates. Omnis natus blanditiis eligendi illo incidunt libero corrupti suscipit, dolorem atque expedita temporibus fuga voluptatum obcaecati alias! Veniam, recusandae!",
-                    etat: "V"
+                    name: "Lithopedion",
+                    header: "Mod Minecraft - 👨‍👩‍👧‍👦 1 Personne - 💻 Java - 👨‍💻 Développeur Java, Modélisateur 3D & Graphiste",
+                    desc: "Un grand nombres de joueurs de ma génération ont étaient bercé par Minecraft. Ce projet est en attente depuis quelques temps, mais s'éttofe de jour en jour. Il aura pour but d'intégrer un nouvelle univers en jeux, de nombreuses mécaniques, une ambiance japonisante et glauque.",
+                    etat: "V",
+                    link: "https://github.com/Kalyptien/forge-Lithopedion-1.18.2"
                 },
                 {
                     img: "logo",
-                    name: "DDDDDDDDDDDDDDDDDDDDDDD",
-                    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, in voluptates. Omnis natus blanditiis eligendi illo incidunt libero corrupti suscipit, dolorem atque expedita temporibus fuga voluptatum obcaecati alias! Veniam, recusandae!",
-                    etat: "F"
+                    name: "Herobrine.fr",
+                    header: "Site internet - 👨‍👩‍👧‍👦 3 Personnes - 💻 TS - 👨‍💻 Développeur Front-End",
+                    desc: "Herobrine est un jeux de rôle français, depuis 2012, accompagné d'une site internet, lié à un server Minecraft. Chaque joueurs, de nombreux joueurs se regroupent ensemble pour jouer ensemble et vivre diverses aventures. Cependant, il est parfois nécéssaire de faire évoluer le site, certains systèmes. J'ai alors pu rejoindre l'épique de développement pour participer à la refonte d'une élément clé du jeux de rôle.",
+                    etat: "E",
+                    link: "http://herobrine.fr/"
                 },
                 {
                     img: "logo",
-                    name: "EEEEEEEEEEEEE",
-                    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, in voluptates. Omnis natus blanditiis eligendi illo incidunt libero corrupti suscipit, dolorem atque expedita temporibus fuga voluptatum obcaecati alias! Veniam, recusandae!",
-                    etat: "V"
+                    name: "Shadow'List",
+                    header: "App mobile - 👨‍👩‍👧‍👦 1 Personne - 💻 Kotlin - 👨‍💻 Développeur Mobile",
+                    desc: "Il est parfois nécéssaire, en jeux de rôle, de compiler énormément d'informations. C'est dans cette objectif qu'il pourrait être intéréssent d'avoir une application mobile, facile d'accès, pour stocker ces informations. Cela me permettra aussi de découvrir pleinement Jetpack",
+                    etat: "V",
+                    link: ""
                 }
             ]
         }

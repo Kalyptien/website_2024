@@ -156,6 +156,7 @@ const initCVThreeJS = (obj) => {
             window.requestAnimationFrame(tick)
         }
         else {
+            console.log("CV : Scene destroy")
             scene = null
             renderer = null
             camera = null

@@ -1,14 +1,23 @@
 <template>
-    <section id="grid">
-        <div id="container" v-for="pa in pixelarts" :style="{ gridColumn: pa.x, gridRow: pa.y }">
-            <div id="child" :class="pa.class" :style="{ backgroundColor: pa.color, backgroundImage: `url(`+ require(`@/assets/imgPF/pa/${pa.img}`)  + `)` }"></div>
-        </div>
+    <div id="general">
+        <div id="paBG"></div>
+        <section id="grid">
+            <div id="container" v-for="pa in pixelarts" :style="{ gridColumn: pa.x, gridRow: pa.y }">
+                <div id="child" :class="pa.class" :style="{ backgroundColor: pa.color, backgroundImage: `url(`+ require(`@/assets/imgPF/pa/${pa.img}`)  + `)` }"></div>
+            </div>
+        </section>
 
-        <div id="container" v-for="po in photos" :style="{ gridColumn: po.x, gridRow: po.y }">
-            <div id="child" :class="po.class" :style="{backgroundColor: po.color, backgroundImage: `url(`+ require(`@/assets/imgPF/photo/${po.img}`)  + `)` }"></div>
-        </div>
+            <div id="photoBG"></div>
+        <section id="grid">
+            <div id="container" v-for="po in photos" :style="{ gridColumn: po.x, gridRow: po.y }">
+                <div id="child" :class="po.class" :style="{backgroundColor: po.color, backgroundImage: `url(`+ require(`@/assets/imgPF/photo/${po.img}`)  + `)` }"></div>
+            </div>
+        </section>
 
-    </section>
+        <div id="modBG"></div>
+        <section id="grid">
+        </section>
+    </div>
 </template>
 
 <script>
@@ -98,67 +107,67 @@ export default {
             photos: [
                 {
                     x: "1/3",
-                    y: "6",
+                    y: "1",
                     img: "photo1.jpg",
                     class: "cover"
                 },
                 {
                     x: "2/4",
-                    y: "7",
+                    y: "2",
                     img: "photo2.jpg",
                     class: "cover"
                 },
                 {
                     x: "1/3",
-                    y: "8",
+                    y: "3",
                     img: "photo3.jpg",
                     class: "cover"
                 },
                 {
                     x: "3",
-                    y: "6",
+                    y: "1",
                     img: "photo4.jpg",
                     class: "cover"
                 },
                 {
                     x: "1",
-                    y: "7",
+                    y: "2",
                     img: "photo5.jpg",
                     class: "cover"
                 },
                 {
                     x: "3",
-                    y: "8",
+                    y: "3",
                     img: "photo6.jpg",
                     class: "cover"
                 },
                 {
                     x: "2/4",
-                    y: "9",
+                    y: "4",
                     img: "photo7.jpg",
                     class: "cover"
                 },
                 {
                     x: "1",
-                    y: "9",
+                    y: "4",
                     img: "photo8.jpg",
                     class: "cover"
                 },
                 {
                     x: "3",
-                    y: "10",
+                    y: "5",
                     img: "photo9.jpg",
                     class: "cover"
                 },
                 {
                     x: "2",
-                    y: "10",
+                    y: "5",
                     img: "photo10.jpg",
                     class: "cover"
                 },
                 {
                     x: "1",
-                    y: "10",
+                    y: "5",
                     img: "photo11.jpg",
                     class: "cover"
                 },

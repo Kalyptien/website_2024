@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
+    <router-link to="/">Acceuil</router-link>
     <div>
       <router-link to="/curriculum">Moi</router-link> -
       <router-link to="/projet">Mon travail</router-link> -
@@ -43,5 +43,10 @@ nav a.router-link-exact-active {
 
 nav div {
   margin-top: 1%;
+}
+
+#CopyR {
+  text-align: center;
+  color: #EEE;
 }
 </style>

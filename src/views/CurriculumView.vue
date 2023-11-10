@@ -65,7 +65,7 @@
 
     <section id="footer" class="section">
 
-      <h2>Retrouvez plus d'informations sur</h2>
+      <h2>Plus d'informations sur</h2>
       <div class="whitekBG"></div>
 
       <div id="logo">
@@ -75,6 +75,7 @@
     </section>
 
   </div>
+  <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
 </template>
 
 <script>

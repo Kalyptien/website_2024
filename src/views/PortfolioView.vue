@@ -1,22 +1,33 @@
 <template>
     <div id="general">
-        <div id="paBG"></div>
+        <div id="paBG">
+            <h2>Pixel-Art</h2>
+        </div>
         <section id="grid">
             <div id="container" v-for="pa in pixelarts" :style="{ gridColumn: pa.x, gridRow: pa.y }">
-                <div id="child" :class="pa.class" :style="{ backgroundColor: pa.color, backgroundImage: `url(`+ require(`@/assets/imgPF/pa/${pa.img}`)  + `)` }"></div>
+                <div id="child" :class="pa.class"
+                    :style="{ backgroundColor: pa.color, backgroundImage: `url(` + require(`@/assets/imgPF/pa/${pa.img}`) + `)` }">
+                </div>
             </div>
         </section>
 
-            <div id="photoBG"></div>
+        <div id="photoBG">
+            <h2>Photographie</h2>
+        </div>
         <section id="grid">
             <div id="container" v-for="po in photos" :style="{ gridColumn: po.x, gridRow: po.y }">
-                <div id="child" :class="po.class" :style="{backgroundColor: po.color, backgroundImage: `url(`+ require(`@/assets/imgPF/photo/${po.img}`)  + `)` }"></div>
+                <div id="child" :class="po.class"
+                    :style="{ backgroundColor: po.color, backgroundImage: `url(` + require(`@/assets/imgPF/photo/${po.img}`) + `)` }">
+                </div>
             </div>
         </section>
 
-        <div id="modBG"></div>
+        <div id="modBG">
+            <h2>Modélisation 3D</h2>
+        </div>
         <section id="grid">
         </section>
+        <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
     </div>
 </template>
 

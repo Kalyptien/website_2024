@@ -25,7 +25,7 @@ const initCVThreeJS = (obj) => {
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.toneMapping = THREE.ACESFilmicToneMapping
-    
+
     // Scene
     let scene = new THREE.Scene()
 
@@ -71,10 +71,11 @@ const initCVThreeJS = (obj) => {
             object3.rotation.z = - Math.PI / 8
             object3.rotation.y = - Math.PI / 6
 
-            object4.position.y = -31
+            object4.position.y = -22
+            object4.position.z = -6
+            object4.position.x = 6
             object4.rotation.z = - Math.PI / 4
             object4.rotation.y = - Math.PI / 6
-            object4.position.z = -6
 
             scene.add(object)
             scene.add(object2)
@@ -115,9 +116,9 @@ const initCVThreeJS = (obj) => {
     )
 
     //LIGHT
-    const directionalLight = new THREE.DirectionalLight( 0xffffff, 3 );
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
     directionalLight.rotation.y = Math.PI / 2
-    scene.add( directionalLight );
+    scene.add(directionalLight);
 
     //Resize
     window.addEventListener('resize', onWindowResize, false)
@@ -126,12 +127,12 @@ const initCVThreeJS = (obj) => {
         sizes.width = window.innerWidth,
             sizes.height = window.innerHeight
 
-            camera.aspect = sizes.width / sizes.height
-            camera.updateProjectionMatrix()
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
 
-            renderer.setSize(sizes.width, sizes.height)
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-            renderer.render(scene, camera)
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        renderer.render(scene, camera)
     }
 
     //Animation
@@ -145,10 +146,10 @@ const initCVThreeJS = (obj) => {
         }
 
         // Animate camera
-            camera.position.y = - scrollY / sizes.height * 4.5
+        camera.position.y = - scrollY / sizes.height * 4.5
 
         // Render
-            renderer.render(scene, camera)
+        renderer.render(scene, camera)
 
         // Call tick again on the next frame
 

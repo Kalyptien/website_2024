@@ -46,6 +46,7 @@
             <img src="../assets/logo.png">
         </section>
     </section>
+    <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
 </template>
 
 <script>
@@ -57,7 +58,7 @@ export default {
                     img: "logo",
                     name: "Rutabgarre",
                     header: "Gamejam - 👨‍👩‍👧‍👦 4 Personnes - ⏰ 5 jours - 💻 Phyton - 👨‍💻 Intrégrateur Front-End & Graphiste",
-                    desc: "Gamejam réalisé au court de mes études en DUT Informatique, nous avons eu une petite semaine pour réaliser un jeux en Python. Deux thèmes étaient également imposé : 'Fruits & Légumes' et 'S'endormir et se réveiller'. C'est après une semaine de dur labeur que nous avons pu décrocher la 1ere place, avec les honneurs !",
+                    desc: "Gamejam réalisé au court de mes études en DUT Informatique, nous avons eu une petite semaine pour réaliser un jeux en Python. Deux thèmes étaient également imposé : 'Fruits & Légumes' et 'S'endormir et se réveiller'. C'est après une semaine de dur labeur que nous avons pu décrocher la 1ere place, avec les félicitations du Jury !",
                     etat: "F",
                     link: "https://github.com/mindstorm38/rutabagarre"
                 },
@@ -65,7 +66,7 @@ export default {
                     img: "logo",
                     name: "Ani'Game",
                     header: "Blindtest - 👨‍👩‍👧‍👦 2 Personnes - ⏰ 1 an - 💻 Electron / TS - 👨‍💻 Intrégrateur Front-End & Graphiste",
-                    desc: "Je fais partie depuis quelques années d'une association étudiante : Ani'Grenoble. Elle tourne autour de la culture japonaise, de l'animation, ... Après des années de loyaux services, leurs logiciles de Blindtest commencait à devenir un peu ancienne. J'ai alors eu l'occasion de rejoindre un autre membre de l'association pour créer un nouveau logiciel, plus perfomant. Ce logicile est utilisé par l'association lors de festivales.",
+                    desc: "Je fais partie depuis quelques années d'une association étudiante : Ani'Grenoble. Elle tourne autour de la culture japonaise et asiatique de manière très général. Après des années de loyaux services, leurs logiciles de Blindtest commencait à devenir un peu ancienne. J'ai alors eu l'occasion de rejoindre un autre membre de l'association pour créer un nouveau logiciel, plus perfomant. Ce logicile est utilisé par l'association lors de festivales.",
                     etat: "F",
                     link: "https://github.com/GaelGC/ani-grenoble-games-client"
                 },

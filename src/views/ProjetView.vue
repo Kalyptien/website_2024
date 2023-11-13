@@ -40,13 +40,15 @@
 
         </section>
 
-        <section id="contact">
+        <section id="footer">
             <h2> Plus de projets sûr</h2>
 
-            <img src="../assets/logo.png">
+            <div id="contact">
+                <a href="https://github.com/Kalyptien" target="_blank"><img src="../assets/github-mark-white.svg" /></a>
+            </div>
         </section>
     </section>
-    <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
+    <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget - France</p>
 </template>
 
 <script>

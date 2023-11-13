@@ -91,7 +91,6 @@ hr
         width: 40vh
         padding-top: 4%
     section
-        position: relative
         justify-content: center
         margin-top: 35vh
 
@@ -121,36 +120,44 @@ hr
 
 #diplome
     section
-        position: relative
         margin-top: 9%
         justify-content: center
 
 #pro
     section
-        position: relative
         margin-top: 5%
         justify-content: center
 
 #projet
     section
-        position: relative
         margin-top: 5%
         justify-content: center
 
 #footer
+    font-family: 'CovesL', sans-serif
+    text-align: center
+    height: 60vh
+    margin-bottom: 5%
     h2
         padding-top: 5%
         position: inherit
 
-    #logo
-        display: flex
+    #contact
+        padding: 10% 5%
         justify-content: space-around
-        margin-top: 10%
-        img
-            width: 30vh
-            filter: brightness(0.9)
-        img:hover
-            filter: brightness(1)
+        display: flex
+        a
+            text-align: center
+            img
+                transform: scale(2)
+                transition: all .3s
+                filter: blur(3px)
+                opacity: 0.5
+            img:hover
+                filter: blur(0px)
+                opacity: 1
+                transform: greyscale(1)
+    
 
 // ==========   
 

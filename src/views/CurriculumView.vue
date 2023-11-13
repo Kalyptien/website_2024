@@ -63,19 +63,18 @@
 
     <hr>
 
-    <section id="footer" class="section">
+    <section id="footer">
 
       <h2>Plus d'informations sur</h2>
-      <div class="whitekBG"></div>
 
-      <div id="logo">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <img alt="Vue logo" src="../assets/logo.png" />
+      <div id="contact">
+        <a href="https://github.com/Kalyptien" target="_blank"><img src="../assets/github-mark-white.svg" /></a>
+        <a href="https://www.linkedin.com/in/pierre-loup-costes-pinget-8930b7205/" target="_blank"><img src="../assets/iconmonstr-linkedin-3.svg" /></a>
       </div>
     </section>
 
   </div>
-  <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
+  <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget - France</p>
 </template>
 
 <script>

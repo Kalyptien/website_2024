@@ -48,5 +48,9 @@ nav div {
 #CopyR {
   text-align: center;
   color: #EEE;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 0.8em;
 }
 </style>

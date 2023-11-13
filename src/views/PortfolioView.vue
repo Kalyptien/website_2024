@@ -27,7 +27,15 @@
         </div>
         <section id="grid">
         </section>
-        <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget</p>
+
+        <div id="footer">
+            <h2>Plus d'informations sûr</h2>
+
+            <div id="contact">
+                <a id="insta" href="https://www.instagram.com/kalyptien_pixelart/" target="_blank"><img src="../assets/Instagram_simple_icon.svg" /></a>
+            </div>
+        </div>
+        <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget - France</p>
     </div>
 </template>
 

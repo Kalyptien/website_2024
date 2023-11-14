@@ -191,12 +191,16 @@ const initHPThreeJS = () => {
     sizes.width = window.innerWidth,
       sizes.height = window.innerHeight
 
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
+    if(camera != null){
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+    }
 
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.render(scene, camera)
+    if(renderer != null){
+      renderer.setSize(sizes.width, sizes.height)
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+      renderer.render(scene, camera)
+    }
   }
 
   generateGalaxy()

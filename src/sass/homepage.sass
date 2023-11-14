@@ -12,7 +12,7 @@
 
 #void
     content: " "
-    height: 110vh
+    height: 150vh
     width: 100%
     text-align: center
 
@@ -31,7 +31,7 @@ hr
     display: flex
     img
         max-width: 100%
-        transform: scale(1.2)
+        transform: scale(1)
         transition: all .3s
         filter: blur(3px)
         opacity: 0.2
@@ -39,3 +39,17 @@ hr
         filter: blur(0px)
         opacity: 1
         transform: greyscale(1)
+
+@media screen and (max-width: 900px) and (min-width: 600px)
+    h1
+        font-size: 1em
+    #contact
+        img
+            transform: scale(1)
+
+@media screen and (max-width: 600px)
+    h1
+        font-size: 0.8em
+    #contact
+        img
+            transform: scale(0.5)

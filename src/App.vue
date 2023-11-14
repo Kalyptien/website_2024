@@ -53,4 +53,14 @@ nav div {
   font-weight: 800;
   font-size: 0.8em;
 }
+
+@media screen and (max-width: 800px){
+  nav div {
+    display: grid;
+    margin-top: 5%;
+  }
+  #CopyR{
+    font-size: 0.5em;
+  }
+}
 </style>

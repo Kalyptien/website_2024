@@ -29,12 +29,13 @@ const initHPThreeJS = () => {
   let material = null
   let points = null
 
-  const generateGalaxy = () =>
-  {
-    if(points !== null)
-    {
+  const generateGalaxy = () => {
+    if (points !== null) {
+      if (geometry != null)
         geometry.dispose()
+      if (material != null)
         material.dispose()
+      if (scene != null)
         scene.remove(points)
     }
 
@@ -85,19 +86,19 @@ const initHPThreeJS = () => {
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
     geometry.setAttribute('aScale', new THREE.BufferAttribute(scales, 1))
 
-          /**
-    * Material
-    */
-      material = new THREE.ShaderMaterial({
-        depthWrite: false,
-        blending: THREE.AdditiveBlending,
-        vertexColors: true,
-        uniforms:
-        {
-          uTime: { value: 0 },
-          uSize: { value: 30 * renderer.getPixelRatio() }
-        },
-        vertexShader: `
+    /**
+* Material
+*/
+    material = new THREE.ShaderMaterial({
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      vertexColors: true,
+      uniforms:
+      {
+        uTime: { value: 0 },
+        uSize: { value: 30 * renderer.getPixelRatio() }
+      },
+      vertexShader: `
                 uniform float uTime;
                 uniform float uSize;
                 
@@ -137,7 +138,7 @@ const initHPThreeJS = () => {
                     vColor = color;
                 }
               `,
-        fragmentShader: `
+      fragmentShader: `
                 varying vec3 vColor;
       
                 void main()
@@ -191,12 +192,12 @@ const initHPThreeJS = () => {
     sizes.width = window.innerWidth,
       sizes.height = window.innerHeight
 
-    if(camera != null){
-        camera.aspect = sizes.width / sizes.height
-        camera.updateProjectionMatrix()
+    if (camera != null) {
+      camera.aspect = sizes.width / sizes.height
+      camera.updateProjectionMatrix()
     }
 
-    if(renderer != null){
+    if (renderer != null) {
       renderer.setSize(sizes.width, sizes.height)
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       renderer.render(scene, camera)
@@ -205,13 +206,13 @@ const initHPThreeJS = () => {
 
   generateGalaxy()
 
-  const geometry2 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 ); 
-  const material2 = new THREE.MeshBasicMaterial( {color: 0x111111} ); 
-  const cube = new THREE.Mesh( geometry2, material2 ); 
+  const geometry2 = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+  const material2 = new THREE.MeshBasicMaterial({ color: 0x111111 });
+  const cube = new THREE.Mesh(geometry2, material2);
   cube.position.x = -2
   cube.position.y = -2.2
   cube.position.z = 1
-  scene.add( cube );
+  scene.add(cube);
 
   //Animation
   const clock = new THREE.Clock()
@@ -246,39 +247,39 @@ const initHPThreeJS = () => {
       camera = null
     }
 
-    if(Math.round(elapsedTime) < 6){
+    if (Math.round(elapsedTime) < 6) {
       frames++
 
-      if ( elapsedTime >= prevTime + 1 ) {
-        fps = Math.round(( frames * 1000 ) / ( elapsedTime - prevTime ) / 1000);
+      if (elapsedTime >= prevTime + 1) {
+        fps = Math.round((frames * 1000) / (elapsedTime - prevTime) / 1000);
         prevTime = elapsedTime
         frames = 0
       }
     }
 
-    if(Math.round(elapsedTime) == 6 && regen == false){
+    if (Math.round(elapsedTime) == 6 && regen == false) {
 
-      if(fps >= 60){
+      if (fps >= 60) {
         parameters.count = 100_000
         speed = 10
       }
-      else if(fps < 60 && fps >= 50){
+      else if (fps < 60 && fps >= 50) {
         parameters.count = 50_000
         speed = 15
       }
-      else if(fps < 50 && fps >= 30){
+      else if (fps < 50 && fps >= 30) {
         parameters.count = 10_000
         speed = 20
       }
-      else if(fps < 30 && fps >= 10){
+      else if (fps < 30 && fps >= 10) {
         parameters.count = 10_000
         speed = 25
       }
-      else if(fps < 30 && fps >= 0){
+      else if (fps < 30 && fps >= 0) {
         parameters.count = 5_000
         speed = 30
       }
-      else{
+      else {
         parameters.count = 0
       }
 

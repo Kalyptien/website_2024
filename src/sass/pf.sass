@@ -36,14 +36,33 @@
 #paBG, #photoBG, #modBG
     height: 60vh
     width: 100%
-    background-color: #1a1a1a
+    background-color: #111111
     text-align: center
+    background-position: center
+    background-repeat: no-repeat
     h2
         margin: 0px
         padding-top: 13%
         font-family: "Charley"
         font-size: 6em
+
+#paBG
+    background-image: url("@/assets/imgPF/website_2024_sea.png")
+    background-size: 90%
+    h2
+        color: #111
+
+#photoBG
+    background-image: url("@/assets/imgPF/website_2024_photo.png")
+    background-size: 60%
+    h2
         color: #EEE
+
+#modBG
+    background-image: url("@/assets/imgPF/website_2024_3D.png")
+    h2
+        color: #EEE
+
 #footer
     h2
         text-align: center
@@ -54,18 +73,18 @@
         color: #EEE
 
 #contact
-        padding: 5%
-        text-align: center
-        a
-            img
-                width: 10%
-                transition: all .3s
-                filter: blur(3px)
-                opacity: 0.5
-            img:hover
-                filter: blur(0px)
-                opacity: 1
-                transform: greyscale(1)
+    padding: 5%
+    text-align: center
+    a
+        img
+            width: 10%
+            transition: all .3s
+            filter: blur(3px)
+            opacity: 0.5
+        img:hover
+            filter: blur(0px)
+            opacity: 1
+            transform: greyscale(1)
 
 @media screen and (max-width: 900px) and (min-width: 600px)
 
@@ -73,7 +92,7 @@
         h2
             padding-top: 30%
             font-size: 4.5em
-    
+
     #contact
         a
             img
@@ -85,7 +104,6 @@
 
     #grid
         #container
-            #child
             .center
                 background-size: 95%
             .center:hover
@@ -101,7 +119,7 @@
         h2
             padding-top: 50%
             font-size: 3em
-    
+
     #contact
         a
             img
@@ -113,7 +131,6 @@
 
     #grid
         #container
-            #child
             .center
                 background-size: 95%
             .center:hover

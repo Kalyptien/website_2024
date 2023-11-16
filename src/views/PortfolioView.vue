@@ -26,13 +26,19 @@
             <h2>Modélisation 3D</h2>
         </div>
         <section id="grid">
+            <div id="container" v-for="mod in models" :style="{ gridColumn: mod.x, gridRow: mod.y }">
+                <div id="child" :class="mod.class"
+                    :style="{ backgroundColor: mod.color, backgroundImage: `url(` + require(`@/assets/imgPF/3d/${mod.img}`) + `)` }">
+                </div>
+            </div>
         </section>
 
         <div id="footer">
             <h2>Plus d'informations sûr</h2>
 
             <div id="contact">
-                <a id="insta" href="https://www.instagram.com/kalyptien_pixelart/" target="_blank"><img src="../assets/Instagram_simple_icon.svg" /></a>
+                <a id="insta" href="https://www.instagram.com/kalyptien_pixelart/" target="_blank"><img
+                        src="../assets/Instagram_simple_icon.svg" /></a>
             </div>
         </div>
         <p id="CopyR">Copyright © 2023 - Tout droits réservés Pierre-Loup Costes-Pinget - France</p>
@@ -121,6 +127,13 @@ export default {
                     color: "#5c5c5c",
                     img: "pa11.png",
                     class: "center"
+                },
+                {
+                    x: "3",
+                    y: "3",
+                    color: "#5c5c5c",
+                    img: "pa14.png",
+                    class: "center"
                 }
             ],
             photos: [
@@ -190,6 +203,32 @@ export default {
                     img: "photo11.jpg",
                     class: "cover"
                 },
+            ],
+            models: [
+                {
+                    x: "2/4",
+                    y: "1",
+                    img: "model1.png",
+                    class: "cover"
+                },
+                {
+                    x: "3",
+                    y: "2",
+                    img: "model2.jpg",
+                    class: "cover"
+                },
+                {
+                    x: "1",
+                    y: "1",
+                    img: "model3.png",
+                    class: "cover"
+                },
+                {
+                    x: "1/3",
+                    y: "2",
+                    img: "model4.png",
+                    class: "cover"
+                }
             ]
         }
     }

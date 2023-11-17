@@ -8,6 +8,8 @@ window.addEventListener('scroll', () => {
 
 const initHPThreeJS = () => {
 
+  const mantaIMG = require("@/assets/MantaTexture2048.png")
+
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -206,13 +208,45 @@ const initHPThreeJS = () => {
 
   generateGalaxy()
 
-  const geometry2 = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-  const material2 = new THREE.MeshBasicMaterial({ color: 0x111111 });
-  const cube = new THREE.Mesh(geometry2, material2);
-  cube.position.x = -2
-  cube.position.y = -2.2
-  cube.position.z = 1
-  scene.add(cube);
+  //Loader & Textures
+  const loader = new THREE.TextureLoader();
+
+  const MantaTexture = loader.load(mantaIMG)
+  MantaTexture.encoding = THREE.sRGBEncoding;
+
+  const mantaSkin = new THREE.MeshBasicMaterial({ map: MantaTexture })
+
+  //OBJ
+  const objLoader = new OBJLoader()
+  let sectionMeshes = []
+
+  objLoader.load(
+    'manta.obj',
+    (object) => {
+      scene.add(object)
+
+      object.position.y = -2.8
+      object.position.x = -2
+      object.position.z = 1.5
+
+      object.rotation.y = Math.PI / 1.1
+      object.rotation.x = Math.PI / 4
+      object.rotation.z = Math.PI / 10
+
+      object.traverse(function (child) {
+        if (child instanceof THREE.Mesh) {
+          child.material = mantaSkin;
+        }
+      });
+    },
+    (xhr) => {
+      console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+    },
+    (error) => {
+      console.log(error)
+    }
+  )
+
 
   //Animation
   const clock = new THREE.Clock()

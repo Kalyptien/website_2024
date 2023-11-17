@@ -54,12 +54,29 @@ nav div {
   font-size: 0.8em;
 }
 
-@media screen and (max-width: 800px){
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #DDD;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
   nav div {
     display: grid;
     margin-top: 5%;
   }
-  #CopyR{
+
+  #CopyR {
     font-size: 0.5em;
   }
 }

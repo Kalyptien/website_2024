@@ -115,8 +115,10 @@ hr
             font-size: 3em
         h4
             font-size: 1.5em
-    :last-child
-        padding: 1%
+            a
+                text-decoration: underline
+        :last-child
+            padding-bottom: 2%
 
 #diplome
     section
@@ -151,64 +153,14 @@ hr
             img
                 transform: scale(2)
                 transition: all .3s
-                filter: blur(3px)
-                opacity: 0.5
+                filter: blur(2px)
+                opacity: 0.7
             img:hover
                 filter: blur(0px)
                 opacity: 1
                 transform: greyscale(1)
-    
 
-// ==========   
-
-@media screen and (max-width: 900px) and (min-width: 600px)
-
-    h1
-        font-size: 1.5em
-        padding-top: 15%
-
-    h2
-        font-size: 1em
-        padding-top: 5%
-
-    h3
-        font-size: 1.5em
-        padding-top: 2%
-
-    h4
-        font-size: 1em
-        padding-top: 1%
-
-    .whiteBG
-        margin-left: 20%
-        margin-right: 20%
-
-    #prog
-        h2
-            padding-top: 10%
-            font-size: 0.7em
-
-    #diplome, #projet, #pro
-        h2
-            padding-top: 10%
-            font-size: 0.7em
-        section
-            margin-top: 15%
-            h3
-                font-size: 2em
-            h4
-                font-size: 1em
-
-    #footer
-        h2
-            padding-top: 5%
-            font-size: 0.7em
-        #contact
-            a
-                img
-                    transform: scale(1.5)
-
-@media screen and (max-width: 600px)
+@media screen and (max-width: 576px) and (min-width: 0px)
 
     h1
         font-size: 1em
@@ -258,4 +210,244 @@ hr
         #contact
             a
                 img
+                    transform: scale(1)
+
+@media screen and (max-width: 768px) and (min-width: 577px)
+    h1
+        font-size: 1em
+        padding-top: 10%
+
+    h2
+        font-size: 0.8em
+        padding-top: 7%
+
+    h3
+        font-size: 1.5em
+        padding-top: 5%
+
+    h4
+        font-size: 1em
+        padding-top: 1%
+
+    .whiteBG
+        margin-left: 10%
+        margin-right: 10%
+
+    .section
+        min-height: 70vh
+
+    #prog
+        h2
+            padding-top: 10%
+            font-size: 0.6em
+        table
+            font-size: 1.1em
+
+    #diplome, #projet, #pro
+        h2
+            padding-top: 10%
+            font-size: 0.6em
+        section
+            margin-top: 10%
+            h3
+                font-size: 1.7em
+            h4
+                font-size: 1.2em
+
+    #footer
+        h2
+            padding-top: 10%
+            font-size: 0.5em
+        #contact
+            a
+                img
+                    transform: scale(1)
+
+@media screen and (max-width: 992px) and (min-width: 769px)
+    h1
+        font-size: 1.5em
+        padding-top: 15%
+
+    h2
+        font-size: 1em
+        padding-top: 5%
+
+    h3
+        font-size: 1.5em
+        padding-top: 2%
+
+    h4
+        font-size: 1em
+        padding-top: 1%
+
+    .whiteBG
+        margin-left: 20%
+        margin-right: 20%
+
+    #prog
+        h2
+            padding-top: 10%
+            font-size: 0.7em
+
+    #diplome, #projet, #pro
+        h2
+            padding-top: 10%
+            font-size: 0.7em
+        section
+            margin-top: 12%
+            h3
+                font-size: 2em
+            h4
+                font-size: 1.4em
+
+    #footer
+        h2
+            padding-top: 5%
+            font-size: 0.7em
+        #contact
+            a
+                img
                     transform: scale(1.3)
+
+
+@media screen and (max-width: 1200px) and (min-width: 993px)
+    h1
+        font-size: 1.5em
+        padding-top: 15%
+
+    h2
+        font-size: 1em
+        padding-top: 5%
+
+    h3
+        font-size: 1.5em
+        padding-top: 2%
+
+    h4
+        font-size: 1em
+        padding-top: 1%
+
+    .whiteBG
+        margin-left: 15%
+        margin-right: 15%
+
+    #prog
+        h2
+            padding-top: 10%
+            font-size: 0.9em
+
+    #diplome, #projet, #pro
+        h2
+            padding-top: 10%
+            font-size: 1.5em
+        section
+            margin-top: 10%
+            h3
+                font-size: 2.7em
+            h4
+                font-size: 1.8em
+
+    #footer
+        h2
+            padding-top: 5%
+            font-size: 0.7em
+        #contact
+            a
+                img
+                    transform: scale(1.5)
+
+@media screen and (max-width: 2560px) and (min-width: 1921px)
+    h1
+        font-size: 3em
+        padding-top: 5%
+
+    h2
+        font-size: 2.2em
+        padding-top: 5%
+
+    h3
+        font-size: 2em
+        padding-top: 2%
+
+    h4
+        font-size: 1.8em
+        padding-top: 1%
+
+    .whiteBG
+        margin-left: 15%
+        margin-right: 15%
+
+    #prog
+        h2
+            padding-top: 10%
+            font-size: 1.2em
+        table
+            font-size: 3em
+
+    #diplome, #projet, #pro
+        h2
+            padding-top: 10%
+            font-size: 2em
+        section
+            margin-top: 10%
+            h3
+                font-size: 3.5em
+            h4
+                font-size: 2.8em
+
+    #footer
+        h2
+            padding-top: 5%
+            font-size: 1.5em
+        #contact
+            a
+                img
+                    transform: scale(2)
+
+@media screen and (max-width: 3840px) and (min-width: 2561px)
+    h1
+        font-size: 5em
+        padding-top: 5%
+
+    h2
+        font-size: 3em
+        padding-top: 5%
+
+    h3
+        font-size: 4em
+        padding-top: 2%
+
+    h4
+        font-size: 3em
+        padding-top: 1%
+
+    .whiteBG
+        margin-left: 15%
+        margin-right: 15%
+
+    #prog
+        h2
+            padding-top: 10%
+            font-size: 3em
+        table
+            font-size: 4em
+
+    #diplome, #projet, #pro
+        h2
+            padding-top: 10%
+            font-size: 4em
+        section
+            margin-top: 5%
+            h3
+                font-size: 7em
+            h4
+                font-size: 4em
+
+    #footer
+        h2
+            padding-top: 5%
+            font-size: 1.5em
+        #contact
+            a
+                img
+                    transform: scale(3)

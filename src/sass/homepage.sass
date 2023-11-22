@@ -32,24 +32,53 @@ hr
     img
         max-width: 100%
         transform: scale(1)
-        transition: all .3s
-        filter: blur(3px)
-        opacity: 0.2
+        transition: all .2s
+        filter: blur(2px)
+        opacity: 0.7
     img:hover
         filter: blur(0px)
         opacity: 1
         transform: greyscale(1)
 
-@media screen and (max-width: 900px) and (min-width: 600px)
+@media screen and (max-width: 576px) and (min-width: 0px)
     h1
         font-size: 1em
     #contact
         img
-            transform: scale(1)
+            transform: scale(0.6)
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 768px) and (min-width: 577px)
     h1
-        font-size: 0.8em
+        font-size: 1.3em
     #contact
         img
-            transform: scale(0.5)
+            transform: scale(0.8)
+
+@media screen and (max-width: 992px) and (min-width: 769px)
+    h1
+        font-size: 1.5em
+    #contact
+        img
+            transform: scale(1)
+
+@media screen and (max-width: 1200px) and (min-width: 993px)
+    h1
+        font-size: 1.8em
+    #contact
+        img
+            transform: scale(1.1)
+
+
+@media screen and (max-width: 2560px) and (min-width: 1921px)
+    h1
+        font-size: 4em
+    #contact
+        img
+            transform: scale(1.5)
+
+@media screen and (max-width: 3840px) and (min-width: 2561px)
+    h1
+        font-size: 5em
+    #contact
+        img
+            transform: scale(2)

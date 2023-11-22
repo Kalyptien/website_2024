@@ -79,7 +79,6 @@ hr
     color: #f5a295
 
 a
-    text-decoration: none
     color: #AAA
 
 a:hover
@@ -103,13 +102,70 @@ a:hover
                 opacity: 1
                 transform: greyscale(1)
 
-@media screen and (max-width: 900px) and (min-width: 600px)
+@media screen and (max-width: 576px) and (min-width: 0px)
+    #content-l, #content-r
+        width: auto
+        img
+            display: none
+        h1
+            margin-top: 7%
+            font-size: 0.5em
+        h3
+            margin-top: 3%
+            font-size: 0.2em
+        h4
+            font-size: 0.9em
+        #text
+            font-size: 0.9em
+            text-align: center
+            justify-content: center
+            margin-left: 25%
+        section
+            height: auto
 
+    #footer
+        h2
+            font-size: 0.5em
+        #contact
+            a
+                img
+                    transform: scale(1)
+
+@media screen and (max-width: 768px) and (min-width: 577px)
+    #content-l, #content-r
+        width: auto
+        img
+            display: none
+        h1
+            margin-top: 7%
+            font-size: 0.5em
+        h3
+            margin-top: 3%
+            font-size: 0.2em
+        h4
+            font-size: 0.9em
+        #text
+            font-size: 0.9em  
+            text-align: center
+            justify-content: center
+            margin-left: 25%
+        section
+            height: auto
+
+    #footer
+        h2
+            font-size: 0.5em
+        #contact
+            a
+                img
+                    transform: scale(1.3)
+
+@media screen and (max-width: 992px) and (min-width: 769px)
     #content-l, #content-r
         img
             width: 30%
             height: 30%
-            margin-top: 15%
+            margin: 2%
         h1
             margin-top: 7%
             font-size: 0.7em
@@ -129,29 +185,78 @@ a:hover
                 img
                     transform: scale(1.5)
 
-@media screen and (max-width: 600px)
-
+@media screen and (max-width: 1200px) and (min-width: 993px)
     #content-l, #content-r
-        width: auto
         img
-            display: none
+            width: 40%
+            height: 40%
+            margin: 1%
         h1
-            margin-top: 7%
-            font-size: 0.5em
+            margin-top: 5%
+            font-size: 0.7em
         h3
-            margin-top: 3%
-            font-size: 0.2em
+            margin-top: 0%
+            font-size: 0.5em
         h4
-            font-size: 0.9em
+            font-size: 0.8em
         #text
-            font-size: 0.9em
-        section
-            height: auto
+            font-size: 1.3em
 
     #footer
         h2
-            font-size: 0.5em
+            font-size: 1em
         #contact
             a
                 img
-                    transform: scale(1.3)
+                    transform: scale(2)
+
+
+@media screen and (max-width: 2560px) and (min-width: 1921px)
+    #content-l, #content-r
+        img
+            width: 40%
+            height: 40%
+            margin: 1%
+        h1
+            margin-top: 5%
+            font-size: 0.8em
+        h3
+            margin-top: 3%
+            font-size: 0.4em
+        h4
+            font-size: 0.8em
+        #text
+            font-size: 2em
+
+    #footer
+        h2
+            font-size: 2em
+        #contact
+            a
+                img
+                    transform: scale(3)
+
+@media screen and (max-width: 3840px) and (min-width: 2561px)
+    #content-l, #content-r
+        img
+            width: 50%
+            height: 50%
+            margin: 1%
+        h1
+            margin-top: 15%
+            font-size: 1em
+        h3
+            margin-top: 3%
+            font-size: 0.5em
+        h4
+            font-size: 1em
+        #text
+            font-size: 2.5em
+
+    #footer
+        h2
+            font-size: 3em
+        #contact
+            a
+                img
+                    transform: scale(4)

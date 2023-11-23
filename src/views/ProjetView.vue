@@ -41,7 +41,7 @@
         </section>
 
         <section id="footer">
-            <h2> Plus de projets sûr</h2>
+            <h2> Plus de projets sur</h2>
 
             <div id="contact">
                 <a href="https://github.com/Kalyptien" target="_blank"><img src="../assets/github-mark-white.svg" /></a>
@@ -60,7 +60,7 @@ export default {
                     img: "Rutabagarre",
                     name: "Rutabgarre",
                     header: "Gamejam - 👨‍👩‍👧‍👦 4 Personnes - ⏰ 5 jours - 💻 Phyton - 👨‍💻 Intrégrateur Front-End & Graphiste",
-                    desc: "Gamejam réalisé au court de mes études en DUT Informatique, nous avons eu une petite semaine pour réaliser un jeux en Python. Deux thèmes étaient également imposé : 'Fruits & Légumes' et 'S'endormir et se réveiller'. C'est après une semaine de dur labeur que nous avons pu décrocher la 1ere place, avec les félicitations du Jury !",
+                    desc: "Gamejam réalisée au cour de mes études en DUT Informatique, nous avons eu une petite semaine pour réaliser un jeu en Python. Deux thèmes étaient également imposés : 'Fruits & Légumes' et 'S'endormir et se réveiller'. C'est après une semaine de dur labeur que nous avons pu décrocher la 1ère place, avec les félicitations du Jury !",
                     etat: "F",
                     link: "https://github.com/mindstorm38/rutabagarre",
                     class: "border"
@@ -69,7 +69,7 @@ export default {
                     img: "AniGame",
                     name: "Ani'Game",
                     header: "Blindtest - 👨‍👩‍👧‍👦 2 Personnes - ⏰ 1 an - 💻 Electron / TS - 👨‍💻 Intrégrateur Front-End & Graphiste",
-                    desc: "Je fais partie depuis quelques années d'une association étudiante : Ani'Grenoble. Elle tourne autour de la culture japonaise et asiatique de manière très général. Après des années de loyaux services, leurs logiciles de Blindtest commencait à devenir un peu ancienne. J'ai alors eu l'occasion de rejoindre un autre membre de l'association pour créer un nouveau logiciel, plus perfomant. Ce logicile est utilisé par l'association lors de festivales.",
+                    desc: "Je fais partie depuis quelques années d'une association étudiante : Ani'Grenoble. Elle tourne autour de la culture japonaise et asiatique de manière très générale. Après des années de loyaux services, leurs logiciels de Blindtest commençait à devenir un peu ancien. J'ai alors eu l'occasion de rejoindre un autre membre de l'association pour créer un nouveau logiciel, plus performant. Ce logiciel est utilisé par l'association lors de festivals.",
                     etat: "F",
                     link: "https://github.com/GaelGC/ani-grenoble-games-client",
                     class: "border"
@@ -78,7 +78,7 @@ export default {
                     img: "Lithopedion",
                     name: "Lithopedion",
                     header: "Mod Minecraft - 👨‍👩‍👧‍👦 1 Personne - 💻 Java - 👨‍💻 Développeur Java, Modélisateur 3D & Graphiste",
-                    desc: "Un grand nombres de joueurs de ma génération ont étaient bercé par Minecraft. Ce projet est en attente depuis quelques temps, mais s'éttofe de jour en jour. Il aura pour but d'intégrer un nouvelle univers en jeux, de nombreuses mécaniques, une ambiance japonisante et glauque.",
+                    desc: "Un grand nombre de joueurs de ma génération ont été bercés par Minecraft. Ce projet est en attente depuis quelques temps, mais s'étoffe de jour en jour. Il aura pour but d'intégrer un nouvel univers en jeu, de nombreuses mécaniques, une ambiance japonisante et glauque.",
                     etat: "V",
                     link: "https://github.com/Kalyptien/forge-Lithopedion-1.18.2",
                     class: "border"
@@ -87,7 +87,7 @@ export default {
                     img: "HB",
                     name: "Herobrine.fr",
                     header: "Site internet - 👨‍👩‍👧‍👦 3 Personnes - 💻 TS - 👨‍💻 Développeur Front-End",
-                    desc: "Herobrine est un jeux de rôle français, depuis 2012, accompagné d'une site internet, lié à un server Minecraft. Chaque joueurs, de nombreux joueurs se regroupent ensemble pour jouer ensemble et vivre diverses aventures. Cependant, il est parfois nécéssaire de faire évoluer le site, certains systèmes. J'ai alors pu rejoindre l'épique de développement pour participer à la refonte d'une élément clé du jeux de rôle.",
+                    desc: "Herobrine est un jeu de rôle français, depuis 2012, accompagné d'un site internet, lié à un serveur Minecraft. Chaque jours, de nombreux joueurs se regroupent pour jouer ensemble et vivre diverses aventures. Cependant, il est parfois nécessaire de faire évoluer le site et certains systèmes. J'ai alors pu rejoindre l'équipe de développement pour participer à la refonte d'un élément clé du jeu de rôle.",
                     etat: "E",
                     link: "http://herobrine.fr/",
                     class: "border"
@@ -96,7 +96,7 @@ export default {
                     img: "ShadowList",
                     name: "Shadow'List",
                     header: "App mobile - 👨‍👩‍👧‍👦 1 Personne - 💻 Kotlin - 👨‍💻 Développeur Mobile",
-                    desc: "Il est parfois nécéssaire, en jeux de rôle, de compiler énormément d'informations. C'est dans cette objectif qu'il pourrait être intéréssent d'avoir une application mobile, facile d'accès, pour stocker ces informations. Cela me permettra aussi de découvrir pleinement Jetpack",
+                    desc: "Il est parfois nécessaire, en jeux de rôles, de compiler énormément d'informations. C'est dans cet objectif qu'il pourrait être intéréssant d'avoir une application mobile, facile d'accès, pour stocker ces informations. Cela me permettra aussi de découvrir pleinement Jetpack.",
                     etat: "V",
                     link: ""
                 }

@@ -3,6 +3,12 @@
     src: url("@/assets/font/Vlanella_outline.otf") format("opentype")
     font-style: normal
 
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
 #webglHP
     position: fixed
     top: 0
@@ -21,6 +27,7 @@ h1
     font-weight: 500
     font-family: "VLANÈLLAOL"
     padding-top: 40vh
+    animation: fadeIn 10s
 
 hr
     width: 45%
@@ -67,7 +74,6 @@ hr
     #contact
         img
             transform: scale(1.1)
-
 
 @media screen and (max-width: 2560px) and (min-width: 1921px)
     h1

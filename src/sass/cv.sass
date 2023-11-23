@@ -13,6 +13,12 @@
     src: url("@/assets/font/Vlanella_regular.otf") format("opentype")
     font-style: normal
 
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
 // ==========
 
 #webglCV
@@ -21,6 +27,7 @@
     left: 0
     outline: none
     z-index: -1
+    animation: fadeIn 2s
 
 // ==========
 

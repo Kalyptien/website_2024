@@ -115,24 +115,19 @@ const initCVThreeJS = (obj) => {
         }
     )
 
-    //LIGHT
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-    directionalLight.rotation.y = Math.PI / 2
-    scene.add(directionalLight);
-
     //Resize
     window.addEventListener('resize', onWindowResize, false)
     function onWindowResize() {
 
         sizes.width = window.innerWidth,
-        sizes.height = window.innerHeight
+            sizes.height = window.innerHeight
 
-        if(camera != null){
+        if (camera != null) {
             camera.aspect = sizes.width / sizes.height
             camera.updateProjectionMatrix()
         }
 
-        if(renderer != null){
+        if (renderer != null) {
             renderer.setSize(sizes.width, sizes.height)
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
             renderer.render(scene, camera)

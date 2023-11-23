@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
 
 const initHPThreeJS = () => {
 
-  const mantaIMG = require("@/assets/MantaTexture2048.png")
+  const mantaIMG = require("@/assets/MantaTexture2048_2.png")
 
   const sizes = {
     width: window.innerWidth,
@@ -214,16 +214,17 @@ const initHPThreeJS = () => {
   const MantaTexture = loader.load(mantaIMG)
   MantaTexture.encoding = THREE.sRGBEncoding;
 
-  const mantaSkin = new THREE.MeshBasicMaterial({ map: MantaTexture })
+  const mantaSkin = new THREE.MeshBasicMaterial({ map: MantaTexture, transparent: true })
+  mantaSkin.opacity = 0
 
   //OBJ
   const objLoader = new OBJLoader()
-  let sectionMeshes = []
 
   objLoader.load(
     'manta.obj',
     (object) => {
       scene.add(object)
+      console.log(mantaSkin.opacity)
 
       object.position.y = -2.8
       object.position.x = -2
@@ -270,15 +271,8 @@ const initHPThreeJS = () => {
     // Render
     renderer.render(scene, camera)
 
-    // Call tick again on the next frame
-    if (!window.location.href.includes("curriculum") && !window.location.href.includes("portfolio") && !window.location.href.includes("projet")) {
-      window.requestAnimationFrame(tick)
-    }
-    else {
-      console.log("HP : Scene destroy")
-      scene = null
-      renderer = null
-      camera = null
+    if (mantaSkin.opacity != 1) {
+      mantaSkin.opacity += 0.05
     }
 
     if (Math.round(elapsedTime) < 6) {
@@ -319,6 +313,17 @@ const initHPThreeJS = () => {
 
       generateGalaxy()
       regen = true
+    }
+
+    // Call tick again on the next frame
+    if (!window.location.href.includes("curriculum") && !window.location.href.includes("portfolio") && !window.location.href.includes("projet")) {
+      window.requestAnimationFrame(tick)
+    }
+    else {
+      console.log("HP : Scene destroy")
+      scene = null
+      renderer = null
+      camera = null
     }
   }
 

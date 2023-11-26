@@ -29,8 +29,8 @@
       <h2>Mes diplômes</h2>
       <section v-for="dipline in diplomes">
         <h3>{{ dipline.name }}</h3>
-        <h4>{{ dipline.spe }}</h4>
-        <h4>{{ dipline.date }}</h4>
+        <h4 class="bold">{{ dipline.spe }}</h4>
+        <h4 class="italic">{{ dipline.date }}</h4>
       </section>
     </section>
 
@@ -40,10 +40,10 @@
       <h2>Mes expériences</h2>
       <section v-for="expline in experiences">
         <h3>{{ expline.name }}</h3>
-        <h4>{{ expline.techno }}</h4>
+        <h4 class="bold">{{ expline.techno }}</h4>
         <h4>{{ expline.desc }}</h4>
-        <h4>{{ expline.job }}</h4>
-        <h4>{{ expline.date }}</h4>
+        <h4 class="bold">{{ expline.job }}</h4>
+        <h4 class="italic">{{ expline.date }}</h4>
         <h4><a :href=expline.link>Vers {{ expline.name }}</a></h4>
       </section>
     </section>
@@ -54,8 +54,8 @@
       <h2>Mes projets</h2>
       <section v-for="projline in projets">
         <h3>{{ projline.name }}</h3>
-        <h4>{{ projline.info }}</h4>
-        <h4>{{ projline.job }}</h4>
+        <h4 class="italic">{{ projline.info }}</h4>
+        <h4 class="bold">{{ projline.job }}</h4>
         <h4>{{ projline.desc }}</h4>
         <h4><a :href=projline.link>Plus d'informations...</a></h4>
       </section>
@@ -69,7 +69,8 @@
 
       <div id="contact">
         <a href="https://github.com/Kalyptien" target="_blank"><img src="../assets/github-mark-white.svg" /></a>
-        <a href="https://www.linkedin.com/in/pierre-loup-costes-pinget-8930b7205/" target="_blank"><img src="../assets/iconmonstr-linkedin-3.svg" /></a>
+        <a href="https://www.linkedin.com/in/pierre-loup-costes-pinget-8930b7205/" target="_blank"><img
+            src="../assets/iconmonstr-linkedin-3.svg" /></a>
       </div>
     </section>
 
@@ -153,7 +154,7 @@ export default {
         {
           name: "Lojii",
           techno: "PL/pgSQL",
-          desc: "Développement d'un ERP de gestion immobiliaire",
+          desc: "Développement d'un ERP de gestion immobilière",
           job: "Développeur Back-End",
           date: "Septembre 2021 à Octobre 2022 - Neoteem - Meylan",
           link: "https://neoteem.fr"

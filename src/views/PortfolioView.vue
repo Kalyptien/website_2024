@@ -1,5 +1,14 @@
 <template>
     <div id="general">
+
+        <div id="open">
+            <div id="nav">
+                <a onclick="document.getElementById('paBG').scrollIntoView({behavior: 'smooth'})">Pixel-Art</a>
+                <a onclick="document.getElementById('photoBG').scrollIntoView({behavior: 'smooth'})">Photographie</a>
+                <a onclick="document.getElementById('modBG').scrollIntoView({behavior: 'smooth'})">Modélisation</a>
+            </div>
+        </div>
+
         <div id="paBG">
             <h2>Pixel-Art</h2>
         </div>

@@ -17,6 +17,30 @@
     z-index: -1
     width: 100%
 
+#open
+    height: 100vh
+
+#open #nav
+    color: #AAA
+    position: absolute
+    background: none
+    box-shadow: none
+    margin-top: 50vh
+    text-align: center
+    font-family: "Charley"
+    font-size: 3em
+    z-index: 2
+    width: 100%
+
+#open #nav a::after
+    content: " | "
+
+#open #nav a:last-child::after
+    content: ""
+
+#open #nav a:hover
+    color: #EEE
+
 #grid
     width: 100%
     display: grid
@@ -86,7 +110,7 @@
         img
             width: 10%
             transition: all .3s
-            filter: blur(2px)
+            filter: blur(0.5px)
             opacity: 0.7
         img:hover
             filter: blur(0px)

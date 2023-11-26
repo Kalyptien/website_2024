@@ -224,7 +224,6 @@ const initHPThreeJS = () => {
     'manta.obj',
     (object) => {
       scene.add(object)
-      console.log(mantaSkin.opacity)
 
       object.position.y = -2.8
       object.position.x = -2
@@ -272,7 +271,7 @@ const initHPThreeJS = () => {
     renderer.render(scene, camera)
 
     if (mantaSkin.opacity != 1) {
-      mantaSkin.opacity += 0.05
+      mantaSkin.opacity += 0.03
     }
 
     if (Math.round(elapsedTime) < 6) {

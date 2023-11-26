@@ -93,10 +93,18 @@ export default {
                     class: "border"
                 },
                 {
-                    img: "ShadowList",
-                    name: "Shadow'List",
-                    header: "App mobile - 👨‍👩‍👧‍👦 1 Personne - 💻 Kotlin - 👨‍💻 Développeur Mobile",
-                    desc: "Il est parfois nécessaire, en jeux de rôles, de compiler énormément d'informations. C'est dans cet objectif qu'il pourrait être intéréssant d'avoir une application mobile, facile d'accès, pour stocker ces informations. Cela me permettra aussi de découvrir pleinement Jetpack.",
+                    img: "null",
+                    name: "Cerebrum",
+                    header: "App Web - 👨‍👩‍👧‍👦 1 Personne - 💻 Three.js / TS - 👨‍💻 Développeur Web",
+                    desc: "Ce projet est à l'état d'écriture depuis déjà quelques années. Son objectif est d'être capable, en web, de recréer un modèle 3D du cerveau à partir d'imagerie IRM fournit. De nombreux outils pourront être greffés à l'application : la possibilité d'ajouter des claques spécifiques pour mettre en évidence certains problèmes, un moyen de découper le cerveau couche par couche, ...",
+                    etat: "V",
+                    link: ""
+                },
+                {
+                    img: "null",
+                    name: "Kojiki",
+                    header: "Jeux - 👨‍👩‍👧‍👦 1 Personne - 💻 Gamemaker Studio - 👨‍💻 Développeur",
+                    desc: "Ce projet a pour but de prototyper une dynamisation d'un style de jeux très spécifique : Le Tour par tour. Ces jeux sont souvent lents, et demandent beaucoup de réflexion et son assez minimaliste. Mon envie est d'ajouter un peu d'énergie à ces jeux et de grandiose, tout en apportant des références à des univers que j'affectionne tant.",
                     etat: "V",
                     link: ""
                 }

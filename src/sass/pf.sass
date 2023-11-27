@@ -4,13 +4,6 @@
     font-weight: 500
     font-style: normal
 
-#app
-    background-image: url("@/assets/globalBackground.png")
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-    background-attachment: fixed
-
 #general
     position: absolute
     top: 0
@@ -118,6 +111,13 @@
             transform: greyscale(1)
 
 @media screen and (max-width: 576px) and (min-width: 0px)
+    #open #nav
+        display: grid
+        margin-top: 40vh
+
+    #open #nav a::after
+        content: ""
+
     #paBG, #photoBG, #modBG
         h2
             padding-top: 38%
@@ -150,6 +150,13 @@
                 background-size: 190%
 
 @media screen and (max-width: 768px) and (min-width: 577px)
+    #open #nav
+        display: grid
+        margin-top: 40vh
+
+    #open #nav a::after
+        content: ""
+
     #paBG, #photoBG, #modBG
         h2
             padding-top: 27%
@@ -182,6 +189,13 @@
                 background-size: 160%
 
 @media screen and (max-width: 992px) and (min-width: 769px)
+    #open #nav
+        display: grid
+        margin-top: 40vh
+
+    #open #nav a::after
+        content: ""
+
     #paBG, #photoBG, #modBG
         h2
             padding-top: 20%
@@ -214,6 +228,13 @@
                 background-size: 140%
 
 @media screen and (max-width: 1200px) and (min-width: 993px)
+    #open #nav
+        display: grid
+        margin-top: 40vh
+
+    #open #nav a::after
+        content: ""
+
     #paBG, #photoBG, #modBG
         h2
             padding-top: 15%

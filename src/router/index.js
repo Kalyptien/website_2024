@@ -25,6 +25,10 @@ const routes = [
     component: () =>
       import("../views/ProjetView.vue"),
   },
+  {
+    path: '/:pathMatch(.*)*',
+    component: HomeView,
+  },
 ];
 
 const router = createRouter({

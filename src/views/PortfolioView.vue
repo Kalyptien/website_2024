@@ -143,6 +143,27 @@ export default {
                     color: "#5c5c5c",
                     img: "pa14.png",
                     class: "center"
+                },
+                {
+                    x: "1",
+                    y: "4",
+                    color: "#323232",
+                    img: "pa15.png",
+                    class: "center"
+                },
+                {
+                    x: "2",
+                    y: "4",
+                    color: "#33394a",
+                    img: "pa16.png",
+                    class: "center"
+                },
+                {
+                    x: "3",
+                    y: "4",
+                    color: "#37443d",
+                    img: "pa17.png",
+                    class: "center"
                 }
             ],
             photos: [

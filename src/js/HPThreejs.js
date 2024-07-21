@@ -1,5 +1,6 @@
 import * as THREE from 'three'
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 
 let scrollY = window.scrollY
 window.addEventListener('scroll', () => {
@@ -213,37 +214,40 @@ const initHPThreeJS = () => {
 
   const MantaTexture = loader.load(mantaIMG)
   MantaTexture.encoding = THREE.sRGBEncoding;
+  MantaTexture.flipY = false;
 
   const mantaSkin = new THREE.MeshBasicMaterial({ map: MantaTexture, transparent: true })
   mantaSkin.opacity = 0
 
-  //OBJ
-  const objLoader = new OBJLoader()
+  //GLTF
+  const gltfLoader = new GLTFLoader()
+  let mixer;
+  let model;
 
-  objLoader.load(
-    'manta.obj',
-    (object) => {
-      scene.add(object)
+  gltfLoader.load(
+    'manta.gltf',
+    (gltf) => {
+      model = gltf.scene
+      console.log(model)
 
-      object.position.y = -2.8
-      object.position.x = -2
-      object.position.z = 1.5
+      model.position.y = -2.8
+      model.position.x = -2
+      model.position.z = 1.5
 
-      object.rotation.y = Math.PI / 1.1
-      object.rotation.x = Math.PI / 4
-      object.rotation.z = Math.PI / 10
+      model.rotation.y = Math.PI / 1.1
+      model.rotation.x = Math.PI / 4
+      model.rotation.z = Math.PI / 10
 
-      object.traverse(function (child) {
-        if (child instanceof THREE.Mesh) {
-          child.material = mantaSkin;
-        }
-      });
-    },
-    (xhr) => {
-      console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
-    },
-    (error) => {
-      console.log(error)
+      model.children[0].children[0].children[0].material = mantaSkin;
+      model.children[0].children[0].children[1].material = mantaSkin;
+
+      scene.add(model)
+
+      mixer = new THREE.AnimationMixer(model)
+      const clips = gltf.animations
+      const clip = THREE.AnimationClip.findByName(clips, "MantaSwim")
+      const action = mixer.clipAction(clip)
+      action.play()
     }
   )
 
@@ -262,6 +266,14 @@ const initHPThreeJS = () => {
 
     // Update material
     material.uniforms.uTime.value = elapsedTime / speed
+
+    //Animation update
+    if (model) {
+      model.rotation.z = (Math.PI / 10) + (Math.cos(elapsedTime / 10) / 5)
+      model.rotation.x = (Math.PI / 4) + (Math.sin(elapsedTime / 10) / 5)
+    }
+    if (mixer)
+      mixer.update(0.01)
 
     // Animate camera
     camera.position.y = - 2.8 + (- scrollY / (sizes.height) * 0.3)

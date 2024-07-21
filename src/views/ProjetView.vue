@@ -2,7 +2,7 @@
     <div id="BG"></div>
 
     <section id="projet">
-        <section v-for="(projline, index) in projets">
+        <section v-for="(projline, index) in projets" id="content">
 
             <template v-if="index % 2 == 0">
                 <div id="content-l">

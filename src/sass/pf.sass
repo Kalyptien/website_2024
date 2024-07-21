@@ -12,9 +12,13 @@
 
 #open
     height: 100vh
+    background-image: url("@/assets/imgPF/website_2024_header.png")
+    background-position: center
+    background-repeat: no-repeat
+    transform: greyscale(0.1)
 
 #open #nav
-    color: #AAA
+    color: #DDD
     position: absolute
     background: none
     box-shadow: none
@@ -33,6 +37,10 @@
 
 #open #nav a:hover
     color: #EEE
+    text-shadow: 0 0 10px #DDD
+
+#open #nav a:hover::after
+    color: #DDD
 
 #grid
     width: 100%

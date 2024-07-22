@@ -26,6 +26,12 @@ const routes = [
       import("../views/ProjetView.vue"),
   },
   {
+    path: "/hb",
+    name: "hb",
+    component: () =>
+      import("../views/HBView.vue"),
+  },
+  {
     path: '/:pathMatch(.*)*',
     component: HomeView,
   },

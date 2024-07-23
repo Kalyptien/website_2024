@@ -2,6 +2,7 @@
   <nav>
     <router-link to="/">Accueil</router-link>
     <div>
+      <router-link to="/hb">Evenement HB</router-link>
       <router-link to="/curriculum">Moi</router-link>
       <router-link to="/projet">Mon travail</router-link>
       <router-link to="/portfolio">Mon univers</router-link>

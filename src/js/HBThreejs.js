@@ -82,6 +82,7 @@ const initHBThreeJS = () => {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       renderer.render(scene, camera)
     }
+
   }
 
   //Loader & Textures
@@ -105,7 +106,7 @@ const initHBThreeJS = () => {
   const gltfLoader = new GLTFLoader()
 
   gltfLoader.load(
-    'maskAifa2.gltf',
+    'mask.gltf',
     (obj) => {
       model = obj.scene
 
